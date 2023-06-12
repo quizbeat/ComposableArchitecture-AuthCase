@@ -12,17 +12,23 @@ struct Auth: ReducerProtocol {
     
     struct State: Equatable {
         
+        enum NavigationStyle: String, CaseIterable {
+            case modal = "Modal"
+            case push = "Push"
+        }
+        
+        var navigationStyle: NavigationStyle = .push
+        
         @PresentationState
         var destination: Destination.State?
         
-        var username: String = ""
-        var password: String = ""
+        var path = StackState<Profile.State>()
+        
+        var username: String = "borat"
+        var password: String = "qwe"
         
         var isSignInButtonDisabled: Bool = true
         var isSigningIn: Bool = false
-        
-        var profile: UserProfile? = nil
-        var path = StackState<Profile.State>()
         
     }
     
@@ -32,7 +38,10 @@ struct Auth: ReducerProtocol {
             case retry
         }
         
+        case navigationStyleChanged(State.NavigationStyle)
+        
         case destination(PresentationAction<Destination.Action>)
+        case path(StackAction<Profile.State, Profile.Action>)
         
         case usernameChanged(String)
         case passwordChanged(String)
@@ -73,13 +82,14 @@ struct Auth: ReducerProtocol {
                 
             case .signInSucceeded(let profile):
                 state.isSigningIn = false
-                state.profile = profile
-                
-                // Modal Presentation
-                state.destination = .modalProfile(
-                    Profile.State(profile: profile))
-                
-                // Navigation Stack
+
+                switch state.navigationStyle {
+                case .modal:
+                    state.destination = .modalProfile(Profile.State(profile: profile))
+                    
+                case .push:
+                    state.path.append(Profile.State(profile: profile))
+                }
                 
                 return .none
                 
@@ -100,20 +110,35 @@ struct Auth: ReducerProtocol {
                 return .none
                 
             case .destination(.presented(.modalProfile(.listener(.signOut)))):
-                state.destination = nil
+                switch state.navigationStyle {
+                case .modal:
+                    state.destination = nil
+                    
+                case .push:
+                    state.path.removeLast()
+                }
+                
                 state.username = ""
                 state.password = ""
-                state.profile = nil
+                
                 return .none
                 
             case .destination(.presented(.signInFailedAlert(.retry))):
                 return .send(.signInButtonPressed)
                 
+            case .path:
+                return .none
+                
             case .destination:
+                return .none
+                
+            case .navigationStyleChanged(let style):
+                state.navigationStyle = style
                 return .none
             }
         }
         .ifLet(\.$destination, action: /Action.destination) { Destination() }
+        .forEach(\.path, action: /Action.path) { Profile() }
     }
     
 }

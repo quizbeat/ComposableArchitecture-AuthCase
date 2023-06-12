@@ -39,17 +39,13 @@ class AuthService {
 
 extension AuthService: DependencyKey {
     
-    static var liveValue: AuthService = {
-        .init()
-    }()
+    static var liveValue: AuthService = .init()
     
 }
 
 extension AuthService: TestDependencyKey {
     
-    static var testValue: AuthService = {
-        .init()
-    }()
+    static var testValue: AuthService = .init()
     
 }
 

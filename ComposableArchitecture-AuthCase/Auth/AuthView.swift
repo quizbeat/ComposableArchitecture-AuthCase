@@ -13,39 +13,54 @@ struct AuthView: View {
     var store: StoreOf<Auth>
     
     var body: some View {
-        WithViewStore(store, observe: { $0 }) { viewStore in
-            NavigationView {
-                Form {
-                    Section {
-                        TextField(
-                            "Username",
-                            text: viewStore.binding(
-                                get: \.username,
-                                send: Auth.Action.usernameChanged))
-                        
-                        SecureField(
-                            "Password",
-                            text: viewStore.binding(
-                                get: \.password,
-                                send: Auth.Action.passwordChanged))
-                    }
-                    
-                    if viewStore.isSigningIn {
-                        HStack(spacing: 8) {
-                            ProgressView()
-                            Text("Signing In…")
+        NavigationStackStore(self.store.scope(state: \.path, action: { .path($0) })) {
+            WithViewStore(store, observe: { $0 }) { viewStore in
+                NavigationView {
+                    Form {
+                        Section {
+                            TextField(
+                                "Username",
+                                text: viewStore.binding(
+                                    get: \.username,
+                                    send: Auth.Action.usernameChanged))
+                            
+                            SecureField(
+                                "Password",
+                                text: viewStore.binding(
+                                    get: \.password,
+                                    send: Auth.Action.passwordChanged))
                         }
+                        
+                        if viewStore.isSigningIn {
+                            HStack(spacing: 8) {
+                                ProgressView()
+                                Text("Signing In…")
+                            }
+                        }
+                        else {
+                            Button("Sign In", action: {
+                                viewStore.send(.signInButtonPressed)
+                            })
+                            .disabled(viewStore.isSignInButtonDisabled)
+                        }
+                        
+                        Picker(
+                            "Navigation Style",
+                            selection: viewStore.binding(
+                                get: \.navigationStyle,
+                                send: Auth.Action.navigationStyleChanged),
+                            content: {
+                                ForEach(Auth.State.NavigationStyle.allCases, id: \.self) { style in
+                                    Text(style.rawValue).tag(style)
+                                }
+                            })
                     }
-                    else {
-                        Button("Sign In", action: {
-                            viewStore.send(.signInButtonPressed)
-                        })
-                        .disabled(viewStore.isSignInButtonDisabled)
-                    }
+                    .disabled(viewStore.isSigningIn)
+                    .navigationTitle("Sign In")
                 }
-                .disabled(viewStore.isSigningIn)
-                .navigationTitle("Sign In")
             }
+        } destination: { store in
+            ProvfileView(store: store)
         }
         .sheet(
             store: self.store.scope(
