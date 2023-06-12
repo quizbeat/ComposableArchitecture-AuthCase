@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ComposableArchitecture_AuthCaseApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AuthView(store: .init(
+                initialState: .init(),
+                reducer: Auth()._printChanges()))
         }
     }
+    
 }

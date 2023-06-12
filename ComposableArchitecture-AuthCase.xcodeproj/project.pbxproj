@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		802ECBC22A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBC12A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift */; };
-		802ECBC42A370B470002251E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBC32A370B470002251E /* ContentView.swift */; };
 		802ECBC62A370B480002251E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802ECBC52A370B480002251E /* Assets.xcassets */; };
 		802ECBC92A370B480002251E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802ECBC82A370B480002251E /* Preview Assets.xcassets */; };
 		802ECBD32A370B480002251E /* ComposableArchitecture_AuthCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBD22A370B480002251E /* ComposableArchitecture_AuthCaseTests.swift */; };
 		802ECBDD2A370B480002251E /* ComposableArchitecture_AuthCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBDC2A370B480002251E /* ComposableArchitecture_AuthCaseUITests.swift */; };
 		802ECBDF2A370B480002251E /* ComposableArchitecture_AuthCaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBDE2A370B480002251E /* ComposableArchitecture_AuthCaseUITestsLaunchTests.swift */; };
+		802ECBED2A370BEC0002251E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 802ECBEC2A370BEC0002251E /* ComposableArchitecture */; };
+		802ECBEF2A370C270002251E /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBEE2A370C270002251E /* AuthView.swift */; };
+		802ECBF12A370D860002251E /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBF02A370D860002251E /* Auth.swift */; };
+		80B655642A372CB70063D4DB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B655632A372CB70063D4DB /* AuthService.swift */; };
+		80B655672A373E440063D4DB /* ProvfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B655662A373E440063D4DB /* ProvfileView.swift */; };
+		80B6556A2A373ED80063D4DB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B655692A373ED80063D4DB /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		802ECBBE2A370B470002251E /* ComposableArchitecture-AuthCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ComposableArchitecture-AuthCase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802ECBC12A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitecture_AuthCaseApp.swift; sourceTree = "<group>"; };
-		802ECBC32A370B470002251E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		802ECBC52A370B480002251E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		802ECBC82A370B480002251E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		802ECBCE2A370B480002251E /* ComposableArchitecture-AuthCaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ComposableArchitecture-AuthCaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +48,11 @@
 		802ECBD82A370B480002251E /* ComposableArchitecture-AuthCaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ComposableArchitecture-AuthCaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802ECBDC2A370B480002251E /* ComposableArchitecture_AuthCaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitecture_AuthCaseUITests.swift; sourceTree = "<group>"; };
 		802ECBDE2A370B480002251E /* ComposableArchitecture_AuthCaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitecture_AuthCaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		802ECBEE2A370C270002251E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		802ECBF02A370D860002251E /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		80B655632A372CB70063D4DB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		80B655662A373E440063D4DB /* ProvfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvfileView.swift; sourceTree = "<group>"; };
+		80B655692A373ED80063D4DB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				802ECBED2A370BEC0002251E /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				802ECBC12A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift */,
-				802ECBC32A370B470002251E /* ContentView.swift */,
+				80B655652A373E390063D4DB /* Auth */,
+				80B655682A373ECD0063D4DB /* Profile */,
 				802ECBC52A370B480002251E /* Assets.xcassets */,
 				802ECBC72A370B480002251E /* Preview Content */,
 			);
@@ -127,6 +138,25 @@
 			path = "ComposableArchitecture-AuthCaseUITests";
 			sourceTree = "<group>";
 		};
+		80B655652A373E390063D4DB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				802ECBF02A370D860002251E /* Auth.swift */,
+				80B655632A372CB70063D4DB /* AuthService.swift */,
+				802ECBEE2A370C270002251E /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		80B655682A373ECD0063D4DB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				80B655662A373E440063D4DB /* ProvfileView.swift */,
+				80B655692A373ED80063D4DB /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +173,9 @@
 			dependencies = (
 			);
 			name = "ComposableArchitecture-AuthCase";
+			packageProductDependencies = (
+				802ECBEC2A370BEC0002251E /* ComposableArchitecture */,
+			);
 			productName = "ComposableArchitecture-AuthCase";
 			productReference = 802ECBBE2A370B470002251E /* ComposableArchitecture-AuthCase.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +248,9 @@
 				Base,
 			);
 			mainGroup = 802ECBB52A370B470002251E;
+			packageReferences = (
+				802ECBEB2A370BEC0002251E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 802ECBBF2A370B470002251E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802ECBC42A370B470002251E /* ContentView.swift in Sources */,
 				802ECBC22A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift in Sources */,
+				80B6556A2A373ED80063D4DB /* Profile.swift in Sources */,
+				802ECBEF2A370C270002251E /* AuthView.swift in Sources */,
+				80B655672A373E440063D4DB /* ProvfileView.swift in Sources */,
+				802ECBF12A370D860002251E /* Auth.swift in Sources */,
+				80B655642A372CB70063D4DB /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +628,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		802ECBEB2A370BEC0002251E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		802ECBEC2A370BEC0002251E /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 802ECBEB2A370BEC0002251E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 802ECBB62A370B470002251E /* Project object */;
 }
