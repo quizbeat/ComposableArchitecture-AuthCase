@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		802ECBC22A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBC12A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift */; };
+		802ECBC42A370B470002251E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBC32A370B470002251E /* ContentView.swift */; };
+		802ECBC62A370B480002251E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802ECBC52A370B480002251E /* Assets.xcassets */; };
+		802ECBC92A370B480002251E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802ECBC82A370B480002251E /* Preview Assets.xcassets */; };
+		802ECBD32A370B480002251E /* ComposableArchitecture_AuthCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBD22A370B480002251E /* ComposableArchitecture_AuthCaseTests.swift */; };
+		802ECBDD2A370B480002251E /* ComposableArchitecture_AuthCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBDC2A370B480002251E /* ComposableArchitecture_AuthCaseUITests.swift */; };
+		802ECBDF2A370B480002251E /* ComposableArchitecture_AuthCaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802ECBDE2A370B480002251E /* ComposableArchitecture_AuthCaseUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		802ECBCF2A370B480002251E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 802ECBB62A370B470002251E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 802ECBBD2A370B470002251E;
+			remoteInfo = "ComposableArchitecture-AuthCase";
+		};
+		802ECBD92A370B480002251E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 802ECBB62A370B470002251E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 802ECBBD2A370B470002251E;
+			remoteInfo = "ComposableArchitecture-AuthCase";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		802ECBBE2A370B470002251E /* ComposableArchitecture-AuthCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ComposableArchitecture-AuthCase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		802ECBC12A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitecture_AuthCaseApp.swift; sourceTree = "<group>"; };
+		802ECBC32A370B470002251E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		802ECBC52A370B480002251E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		802ECBC82A370B480002251E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		802ECBCE2A370B480002251E /* ComposableArchitecture-AuthCaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ComposableArchitecture-AuthCaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		802ECBD22A370B480002251E /* ComposableArchitecture_AuthCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitecture_AuthCaseTests.swift; sourceTree = "<group>"; };
+		802ECBD82A370B480002251E /* ComposableArchitecture-AuthCaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ComposableArchitecture-AuthCaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		802ECBDC2A370B480002251E /* ComposableArchitecture_AuthCaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitecture_AuthCaseUITests.swift; sourceTree = "<group>"; };
+		802ECBDE2A370B480002251E /* ComposableArchitecture_AuthCaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitecture_AuthCaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		802ECBBB2A370B470002251E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802ECBCB2A370B480002251E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802ECBD52A370B480002251E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		802ECBB52A370B470002251E = {
+			isa = PBXGroup;
+			children = (
+				802ECBC02A370B470002251E /* ComposableArchitecture-AuthCase */,
+				802ECBD12A370B480002251E /* ComposableArchitecture-AuthCaseTests */,
+				802ECBDB2A370B480002251E /* ComposableArchitecture-AuthCaseUITests */,
+				802ECBBF2A370B470002251E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		802ECBBF2A370B470002251E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				802ECBBE2A370B470002251E /* ComposableArchitecture-AuthCase.app */,
+				802ECBCE2A370B480002251E /* ComposableArchitecture-AuthCaseTests.xctest */,
+				802ECBD82A370B480002251E /* ComposableArchitecture-AuthCaseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		802ECBC02A370B470002251E /* ComposableArchitecture-AuthCase */ = {
+			isa = PBXGroup;
+			children = (
+				802ECBC12A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift */,
+				802ECBC32A370B470002251E /* ContentView.swift */,
+				802ECBC52A370B480002251E /* Assets.xcassets */,
+				802ECBC72A370B480002251E /* Preview Content */,
+			);
+			path = "ComposableArchitecture-AuthCase";
+			sourceTree = "<group>";
+		};
+		802ECBC72A370B480002251E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				802ECBC82A370B480002251E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		802ECBD12A370B480002251E /* ComposableArchitecture-AuthCaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				802ECBD22A370B480002251E /* ComposableArchitecture_AuthCaseTests.swift */,
+			);
+			path = "ComposableArchitecture-AuthCaseTests";
+			sourceTree = "<group>";
+		};
+		802ECBDB2A370B480002251E /* ComposableArchitecture-AuthCaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				802ECBDC2A370B480002251E /* ComposableArchitecture_AuthCaseUITests.swift */,
+				802ECBDE2A370B480002251E /* ComposableArchitecture_AuthCaseUITestsLaunchTests.swift */,
+			);
+			path = "ComposableArchitecture-AuthCaseUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		802ECBBD2A370B470002251E /* ComposableArchitecture-AuthCase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 802ECBE22A370B480002251E /* Build configuration list for PBXNativeTarget "ComposableArchitecture-AuthCase" */;
+			buildPhases = (
+				802ECBBA2A370B470002251E /* Sources */,
+				802ECBBB2A370B470002251E /* Frameworks */,
+				802ECBBC2A370B470002251E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ComposableArchitecture-AuthCase";
+			productName = "ComposableArchitecture-AuthCase";
+			productReference = 802ECBBE2A370B470002251E /* ComposableArchitecture-AuthCase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		802ECBCD2A370B480002251E /* ComposableArchitecture-AuthCaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 802ECBE52A370B480002251E /* Build configuration list for PBXNativeTarget "ComposableArchitecture-AuthCaseTests" */;
+			buildPhases = (
+				802ECBCA2A370B480002251E /* Sources */,
+				802ECBCB2A370B480002251E /* Frameworks */,
+				802ECBCC2A370B480002251E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				802ECBD02A370B480002251E /* PBXTargetDependency */,
+			);
+			name = "ComposableArchitecture-AuthCaseTests";
+			productName = "ComposableArchitecture-AuthCaseTests";
+			productReference = 802ECBCE2A370B480002251E /* ComposableArchitecture-AuthCaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		802ECBD72A370B480002251E /* ComposableArchitecture-AuthCaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 802ECBE82A370B480002251E /* Build configuration list for PBXNativeTarget "ComposableArchitecture-AuthCaseUITests" */;
+			buildPhases = (
+				802ECBD42A370B480002251E /* Sources */,
+				802ECBD52A370B480002251E /* Frameworks */,
+				802ECBD62A370B480002251E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				802ECBDA2A370B480002251E /* PBXTargetDependency */,
+			);
+			name = "ComposableArchitecture-AuthCaseUITests";
+			productName = "ComposableArchitecture-AuthCaseUITests";
+			productReference = 802ECBD82A370B480002251E /* ComposableArchitecture-AuthCaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		802ECBB62A370B470002251E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					802ECBBD2A370B470002251E = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					802ECBCD2A370B480002251E = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 802ECBBD2A370B470002251E;
+					};
+					802ECBD72A370B480002251E = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 802ECBBD2A370B470002251E;
+					};
+				};
+			};
+			buildConfigurationList = 802ECBB92A370B470002251E /* Build configuration list for PBXProject "ComposableArchitecture-AuthCase" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 802ECBB52A370B470002251E;
+			productRefGroup = 802ECBBF2A370B470002251E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				802ECBBD2A370B470002251E /* ComposableArchitecture-AuthCase */,
+				802ECBCD2A370B480002251E /* ComposableArchitecture-AuthCaseTests */,
+				802ECBD72A370B480002251E /* ComposableArchitecture-AuthCaseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		802ECBBC2A370B470002251E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802ECBC92A370B480002251E /* Preview Assets.xcassets in Resources */,
+				802ECBC62A370B480002251E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802ECBCC2A370B480002251E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802ECBD62A370B480002251E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		802ECBBA2A370B470002251E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802ECBC42A370B470002251E /* ContentView.swift in Sources */,
+				802ECBC22A370B470002251E /* ComposableArchitecture_AuthCaseApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802ECBCA2A370B480002251E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802ECBD32A370B480002251E /* ComposableArchitecture_AuthCaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802ECBD42A370B480002251E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802ECBDF2A370B480002251E /* ComposableArchitecture_AuthCaseUITestsLaunchTests.swift in Sources */,
+				802ECBDD2A370B480002251E /* ComposableArchitecture_AuthCaseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		802ECBD02A370B480002251E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 802ECBBD2A370B470002251E /* ComposableArchitecture-AuthCase */;
+			targetProxy = 802ECBCF2A370B480002251E /* PBXContainerItemProxy */;
+		};
+		802ECBDA2A370B480002251E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 802ECBBD2A370B470002251E /* ComposableArchitecture-AuthCase */;
+			targetProxy = 802ECBD92A370B480002251E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		802ECBE02A370B480002251E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		802ECBE12A370B480002251E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		802ECBE32A370B480002251E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ComposableArchitecture-AuthCase/Preview Content\"";
+				DEVELOPMENT_TEAM = 898JLBNU25;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nmakarov.ComposableArchitecture-AuthCase";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		802ECBE42A370B480002251E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ComposableArchitecture-AuthCase/Preview Content\"";
+				DEVELOPMENT_TEAM = 898JLBNU25;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nmakarov.ComposableArchitecture-AuthCase";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		802ECBE62A370B480002251E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 898JLBNU25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nmakarov.ComposableArchitecture-AuthCaseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComposableArchitecture-AuthCase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ComposableArchitecture-AuthCase";
+			};
+			name = Debug;
+		};
+		802ECBE72A370B480002251E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 898JLBNU25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nmakarov.ComposableArchitecture-AuthCaseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComposableArchitecture-AuthCase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ComposableArchitecture-AuthCase";
+			};
+			name = Release;
+		};
+		802ECBE92A370B480002251E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 898JLBNU25;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nmakarov.ComposableArchitecture-AuthCaseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ComposableArchitecture-AuthCase";
+			};
+			name = Debug;
+		};
+		802ECBEA2A370B480002251E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 898JLBNU25;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nmakarov.ComposableArchitecture-AuthCaseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ComposableArchitecture-AuthCase";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		802ECBB92A370B470002251E /* Build configuration list for PBXProject "ComposableArchitecture-AuthCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802ECBE02A370B480002251E /* Debug */,
+				802ECBE12A370B480002251E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		802ECBE22A370B480002251E /* Build configuration list for PBXNativeTarget "ComposableArchitecture-AuthCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802ECBE32A370B480002251E /* Debug */,
+				802ECBE42A370B480002251E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		802ECBE52A370B480002251E /* Build configuration list for PBXNativeTarget "ComposableArchitecture-AuthCaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802ECBE62A370B480002251E /* Debug */,
+				802ECBE72A370B480002251E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		802ECBE82A370B480002251E /* Build configuration list for PBXNativeTarget "ComposableArchitecture-AuthCaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802ECBE92A370B480002251E /* Debug */,
+				802ECBEA2A370B480002251E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 802ECBB62A370B470002251E /* Project object */;
+}
