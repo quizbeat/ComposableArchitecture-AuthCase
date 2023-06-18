@@ -19,7 +19,7 @@ struct Profile: ReducerProtocol {
         
     }
     
-    enum Action {
+    enum Action: Equatable {
         
         enum SignOutConfirmationAlert {
             case confirm

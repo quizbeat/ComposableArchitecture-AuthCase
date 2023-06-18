@@ -22,12 +22,12 @@ struct Auth: ReducerProtocol {
         @PresentationState
         var destination: Destination.State?
         
-        var path = StackState<Profile.State>()
+        var path = StackState<Path.State>()
         
         var username: String = "borat"
         var password: String = "qwe"
         
-        var isSignInButtonDisabled: Bool = true
+        var isSignInButtonDisabled: Bool = false
         var isSigningIn: Bool = false
         
     }
@@ -37,15 +37,20 @@ struct Auth: ReducerProtocol {
         enum SignInFailedAlert: Equatable {
             case retry
         }
-        
+                
         case navigationStyleChanged(State.NavigationStyle)
         
+        // Modal Navigation (Sheets, Alerts)
         case destination(PresentationAction<Destination.Action>)
-        case path(StackAction<Profile.State, Profile.Action>)
+        
+        // Push Navigation (Navigation Stack)
+        case path(StackAction<Path.State, Path.Action>)
         
         case usernameChanged(String)
         case passwordChanged(String)
         case signInButtonPressed
+
+        case showEULAButtonPressed
         
         case signInSucceeded(UserProfile)
         case signInFailed
@@ -59,12 +64,12 @@ struct Auth: ReducerProtocol {
             switch action {
             case .usernameChanged(let username):
                 state.username = username
-                state.isSignInButtonDisabled = (state.username.isEmpty || state.password.isEmpty)
+                state.isSignInButtonDisabled = state.hasEmptyCredential
                 return.none
                 
             case .passwordChanged(let password):
                 state.password = password
-                state.isSignInButtonDisabled = (state.username.isEmpty || state.password.isEmpty)
+                state.isSignInButtonDisabled = state.hasEmptyCredential
                 return .none
                 
             case .signInButtonPressed:
@@ -80,15 +85,28 @@ struct Auth: ReducerProtocol {
                     }
                 }
                 
+            case .showEULAButtonPressed:
+                let eula = EULA.State()
+                switch state.navigationStyle {
+                case .modal:
+                    state.destination = .eula(eula)
+                    
+                case .push:
+                    state.path.append(.eula(eula))
+                }
+                return .none
+                
             case .signInSucceeded(let profile):
                 state.isSigningIn = false
 
+                let profile = Profile.State(profile: profile)
+                
                 switch state.navigationStyle {
                 case .modal:
-                    state.destination = .modalProfile(Profile.State(profile: profile))
+                    state.destination = .profile(profile)
                     
                 case .push:
-                    state.path.append(Profile.State(profile: profile))
+                    state.path.append(.profile(profile))
                 }
                 
                 return .none
@@ -109,24 +127,32 @@ struct Auth: ReducerProtocol {
                 )
                 return .none
                 
-            case .destination(.presented(.modalProfile(.listener(.signOut)))):
-                switch state.navigationStyle {
-                case .modal:
-                    state.destination = nil
-                    
-                case .push:
-                    state.path.removeLast()
-                }
-                
-                state.username = ""
-                state.password = ""
-                
+            // Modal Navigation - Sign Out Handling
+            case .destination(.presented(.profile(.listener(.signOut)))):
+                state.clearCredentials()
+                state.destination = nil
                 return .none
-                
+            
+            // Modal Navigation - Alert Action Handling
             case .destination(.presented(.signInFailedAlert(.retry))):
                 return .send(.signInButtonPressed)
                 
-            case .path:
+            // Push Navigation
+            case .path(let pathAction):
+                switch pathAction {
+                // Sign Out Handling
+                case .element(id: let id, action: .profile(.listener(.signOut))):
+                    state.clearCredentials()
+                    state.path.pop(from: id)
+                
+                // Tap/Gesture Pop Handling
+                case .popFrom(let id):
+                    print("pop from \(id)")
+                    
+                default:
+                    break
+                }
+
                 return .none
                 
             case .destination:
@@ -138,7 +164,7 @@ struct Auth: ReducerProtocol {
             }
         }
         .ifLet(\.$destination, action: /Action.destination) { Destination() }
-        .forEach(\.path, action: /Action.path) { Profile() }
+        .forEach(\.path, action: /Action.path) { Path() }
     }
     
 }
@@ -149,22 +175,61 @@ extension Auth {
         
         enum State: Equatable {
             
-            case modalProfile(Profile.State)
+            case eula(EULA.State)
+            case profile(Profile.State)
             case signInFailedAlert(AlertState<Auth.Action.SignInFailedAlert>)
             
         }
         
         enum Action {
             
-            case modalProfile(Profile.Action)
+            case eula(EULA.Action)
+            case profile(Profile.Action)
             case signInFailedAlert(Auth.Action.SignInFailedAlert)
             
         }
         
         var body: some ReducerProtocolOf<Self> {
-            Scope(state: /State.modalProfile, action: /Action.modalProfile) { Profile() }
+            Scope(state: /State.eula, action: /Action.eula) { EULA() }
+            Scope(state: /State.profile, action: /Action.profile) { Profile() }
         }
         
+    }
+    
+}
+
+extension Auth {
+    
+    struct Path: ReducerProtocol {
+        
+        enum State: Equatable {
+            case profile(Profile.State)
+            case eula(EULA.State)
+        }
+        
+        enum Action: Equatable {
+            case profile(Profile.Action)
+            case eula(EULA.Action)
+        }
+        
+        var body: some ReducerProtocolOf<Self> {
+            Scope(state: /State.eula , action: /Action.eula) { EULA() }
+            Scope(state: /State.profile , action: /Action.profile) { Profile() }
+        }
+        
+    }
+    
+}
+
+extension Auth.State {
+    
+    mutating func clearCredentials() {
+        username = ""
+        password = ""
+    }
+    
+    var hasEmptyCredential: Bool {
+        username.isEmpty || password.isEmpty
     }
     
 }

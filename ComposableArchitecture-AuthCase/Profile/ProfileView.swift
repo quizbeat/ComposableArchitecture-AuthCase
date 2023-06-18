@@ -8,7 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct ProvfileView: View {
+struct ProfileView: View {
     
     let store: StoreOf<Profile>
     
@@ -60,7 +60,7 @@ struct ProvfileView: View {
 }
 
 #Preview {
-    ProvfileView(store: .init(
+    ProfileView(store: .init(
         initialState: .init(
             profile: UserProfile(
                 firstName: "Borat",
